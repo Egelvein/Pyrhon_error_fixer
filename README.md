@@ -16,7 +16,7 @@ The [dataset](https://huggingface.co/datasets/TacoPrime/errored_python) was take
 This section will include information on common errors when using the tool or attempting to reproduce experiments.
 
 ## Project Team
-- [Michail Ivanov]() - ML Engineer
+- [Mikhail Ivanov]() - ML Engineer
 - [Viacheslav Siniaev](https://www.linkedin.com/in/vyacheslavsinyaev/) - ML Engineer
 
 ## Links
