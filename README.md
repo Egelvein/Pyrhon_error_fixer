@@ -5,7 +5,7 @@ The project aims to create a system based on Retrieval-Augmented Generation (RAG
 
 ## Contents
 - [Data Preprocessing](#data-preprocessing)
-- [RAG-Baseline](#rag_base)
+- [RAG-baseline](#rag_base)
 - [FAQ](#faq)
 - [Project Team](#project-team)
 - [Links](#links)
