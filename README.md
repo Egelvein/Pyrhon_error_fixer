@@ -13,6 +13,15 @@ The project aims to create a system based on Retrieval-Augmented Generation (RAG
 ## Data Preprocessing
 The [dataset](https://huggingface.co/datasets/TacoPrime/errored_python) was taken and processed. During processing, the data was divided into 4 categories: `prompt`, `input` (erroneous Python code), `explanation` (description of the error), and `correct_code`. Duplicates were removed, resulting in a final dataset of 7,095 data points. The data was saved in formats that are convenient for working with the RAG system (`csv` and `json`).
 
+## RAG-baseline (in progress)
+- Embeddings: all-MiniLM-L6-v2
+- Indexer: FAISS
+- Generator: google/flan-t5-large -> text2text-generation
+- Error-validator
+
+## API-Deployment
+- fastAPI
+
 ## FAQ
 This section will include information on common errors when using the tool or attempting to reproduce experiments.
 
