@@ -1,3 +1,8 @@
+# Data:
 *.json
 *.csv
 *.faiss
+
+# Folders:
+__pycache__/
+.gradio/
