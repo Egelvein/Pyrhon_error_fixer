@@ -22,6 +22,11 @@ The [dataset](https://huggingface.co/datasets/TacoPrime/errored_python) was take
 ## API-Deployment
 - fastAPI
 
+## Evaluation
+We came up with somewhat custom metrics of correctness: due to the fact that our intention is to help novices in coding, we decided to test models correctnes in a way that it shouldnt return broken code. Since its tricky to validate the code logic if its any different from basic algorithms or print("hello world"), out best bet is to check if model returned somewhat working without ValueError or IndexError, etc. 
+- If model's output returned working code (not necessarily _desired_ output), then we mark data point as "1", else - 0.
+- Based on 100 examples out of 7095 we came with  
+
 ## FAQ
 This section will include information on common errors when using the tool or attempting to reproduce experiments.
 
