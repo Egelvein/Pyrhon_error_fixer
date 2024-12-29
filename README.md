@@ -16,7 +16,7 @@ The [dataset](https://huggingface.co/datasets/TacoPrime/errored_python) was take
 ## RAG-baseline
 - Embeddings: all-MiniLM-L6-v2
 - Indexer: FAISS
-- Generator: google/flan-t5-large -> text2text-generation
+- Generator: api gemini -> text2text-generation
 - Error-validator
 
 ## API-Deployment
