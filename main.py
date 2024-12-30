@@ -8,6 +8,9 @@ from pydantic import BaseModel
 import gradio as gr
 from datetime import datetime
 
+import google.generativeai as genai
+from api_key_file import GOOGLE_API_KEY
+
 app = FastAPI()
 
 kg_path = "../Datasets/preprocessed_data/rag_data.json"
@@ -37,7 +40,11 @@ with open(kg_path, "r") as file:
 
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 index = faiss.read_index("rag_base/retriever_index.faiss")
-generator = pipeline("text2text-generation", model="google/flan-t5-base")
+# generator = pipeline("text2text-generation", model="google/flan-t5-base")
+
+genai.configure(api_key=GOOGLE_API_KEY)
+model = genai.GenerativeModel('gemini-1.5-flash')
+
 
 class QueryRequest(BaseModel):
     query: str
@@ -89,13 +96,16 @@ Below is the user's broken Python code, along with relevant examples of similar 
 2. Corrected Code: Provide the corrected version of the user's code based on the selected example."""
     )
 
-    response = generator(combined_input,
-                         max_length=2048,
-                         do_sample=True,
-                         top_p=0.95,
-                         temperature=0.25)
+    #response = generator(combined_input,
+                         #max_length=2048,
+                         #do_sample=True,
+                         #top_p=0.95,
+                         #temperature=0.25)
 
-    return response[0]['generated_text'], combined_input
+    response = model.generate_content(combined_input)
+
+    # return response[0]['generated_text'], combined_input
+    return response.text, combined_input
 
 def save_chat_history(user_input, bot_response):
     entry = {

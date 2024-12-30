@@ -1,8 +1,9 @@
 # Data:
-*.json
+# *.json
 *.csv
-*.faiss
+# *.faiss
 
 # Folders:
 __pycache__/
 .gradio/
+rag_base/.ipynb_checkpoints/
