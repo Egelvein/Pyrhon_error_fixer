@@ -7,3 +7,7 @@
 __pycache__/
 .gradio/
 rag_base/.ipynb_checkpoints/
+
+# Debugging files
+chat_history.json
+prompt_for_model.json
