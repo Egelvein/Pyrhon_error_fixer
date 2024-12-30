@@ -21,7 +21,7 @@ The [dataset](https://huggingface.co/datasets/TacoPrime/errored_python) was take
 - Error-validator
 
 ## API-Deployment
-- fastAPI
+- fastAPI + gradio
 
 ## Evaluation
 We came up with somewhat custom metrics of correctness: due to the fact that our intention is to help novices in coding, we decided to test models correctnes in a way that it shouldnt return broken code. Since its tricky to validate the code logic if its any different from basic algorithms or print("hello world"), out best bet is to check if model returned somewhat working without ValueError or IndexError, etc. 
@@ -29,6 +29,20 @@ We came up with somewhat custom metrics of correctness: due to the fact that our
 - Based on 100 examples picked for testing, we came with impressive result: 92% of corrected outputs are valid to run. (Explanation for such result will be a bit later).
 - Example below>
 ![simple](./rag_base/simple_exmpl.jpg)
+
+## How to build
+1. Clone the repo with `git clone https://github.com/Egelvein/Python_error_fixer.git`
+2. Go to the folder `cd Python_error_fixer`
+3. Install the requirements `pip install -r requirements.txt`
+4. Get the free gemini api-key [here](https://ai.google.dev/gemini-api/docs/api-key?hl=en)
+5. Write this code in file `api_key_file.py`
+
+## How to use
+1. Run the command `uvicorn main:app`
+2. Open url `http://127.0.0.1:8000`
+3. Open url `http://127.0.0.1:7860`
+4. Enjoy it!
+
 ## FAQ
 This section will include information on common errors when using the tool or attempting to reproduce experiments.
 
