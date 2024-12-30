@@ -1,0 +1,8 @@
+faiss_cpu==1.9.0.post1
+fastapi==0.115.6
+gradio==5.9.1
+numpy==1.23.5
+protobuf==5.29.2
+pydantic==2.10.4
+sentence_transformers==3.3.1
+transformers==4.47.0
